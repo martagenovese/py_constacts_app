@@ -2,7 +2,7 @@ import sqlite3
 connection = sqlite3.connect('data.db')
 
 
-def see_all_contacts():
+def delete_a_contact():
     
     cur = connection.cursor()
 
@@ -23,6 +23,14 @@ def add_a_contact(nome, cognome, telefono):
 def search_for_a_contact(nome, cognome):
     cur = connection.cursor()
     cur.execute('SELECT * FROM contacts WHERE nome = ? AND cognome = ?', (nome, cognome, )) #query per vedere tutti i contatti
+    result = cur.fetchall()
+    print(result)
+    # close the cursor
+    cur.close()
+
+def see_all_contacts():
+    cur = connection.cursor()
+    cur.execute('SELECT * FROM contacts') #query per vedere tutti i contatti
     result = cur.fetchall()
     print(result)
     # close the cursor
