@@ -13,7 +13,7 @@ def delete_a_contact(id):
     cur = connection.cursor()
 
     # query the database for ALL data in the notes table
-    cur.execute('DELETE FROM contacts WHERE id = '+id+';')
+    cur.execute('DELETE FROM contacts WHERE id = ?', (id, ))
 
     # print the result
     result = cur.fetchall()
