@@ -24,7 +24,8 @@ def start_routine():
     elif(n==2):
         add_a_contact() 
     elif (n==3):
-        delete_a_contact()  
+        id=int(input())
+        delete_a_contact(id)  
     elif (n==4):
         search_for_a_contact()
     else:
