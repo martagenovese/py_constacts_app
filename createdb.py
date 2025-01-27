@@ -19,7 +19,7 @@ cur = connection.cursor()
 # create the database table if it doesn't exist
 table_schema = """
 CREATE TABLE IF NOT EXISTS contacts (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome varchar(30) NOT NULL,
     cognome varchar(30) NOT NULL,
     telefono char(10) NOT NULL UNIQUE

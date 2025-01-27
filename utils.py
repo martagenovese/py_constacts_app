@@ -2,22 +2,19 @@ import sqlite3
 connection = sqlite3.connect('data.db')
 
 
-def delete_a_contact():
+def delete_a_contact(id):
     
     cur = connection.cursor()
 
     # query the database for ALL data in the notes table
     cur.execute('DELETE FROM contacts WHERE id = ?', (id, ))
-
-    # print the result
-    result = cur.fetchall()
-    print(result)
+    connection.commit()
     # close the cursor
     cur.close()
 
 def add_a_contact(nome, cognome, telefono):
     cursor = connection.cursor()
-    cursor.execute(f"INSERT INTO contatti (nome, cognome, telefono) VALUES (?, ?, ?)", (nome, cognome, telefono))
+    cursor.execute(f"INSERT INTO contacts (nome, cognome, telefono) VALUES (?, ?, ?)", (nome, cognome, telefono))
     connection.commit()
 
 def search_for_a_contact(nome, cognome):
