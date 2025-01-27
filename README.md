@@ -94,3 +94,23 @@ Within this interface, you can add a title for the pull request and a descriptio
 Now the project manager can review the pull request, add comments and ask for changes or accept it.
 
 Pull request authors can’t approve their own pull request or ask for changes.
+
+| Categoria | Sotto-Categoria | Punteggio Massimo | Criteri di Valutazione |
+|-----------|-----------------|-------------------|------------------------|
+| **1. Struttura del Progetto** | Correttezza directory | 0.5 | Struttura conforme alle specifiche |
+| | Completezza file | 0.5 | Presenza di tutti i file richiesti |
+| | Nomenclatura | 0.5 | Utilizzo corretto della nomenclatura |
+| **2. Gestione Repository Git** | Numero di commit | 0.5 | Commit sequenziali e significativi |
+| | Utilizzo branch | 0.5 | Corretto utilizzo dei branch |
+| | Gestione repository | 0.5 | Organizzazione e gestione complessiva |
+| | Conflitti di merge | 1.25 | Gestione lavoro parallelo e risoluzione conflitti |
+| **3. Implementazione** | Conformità linee guida | 0.5 | Aderenza alle specifiche del progetto |
+| | Funzionamento | 0.5 | Corretto funzionamento delle funzionalità |
+| **4. Test** | Copertura test | 0.75 | Test per tutte le funzionalità |
+| | Implementazione test | 0.75 | Qualità e completezza dei test |
+| **5. Lavoro in Team** | Definizione ruoli | 0.5 | Chiarezza dei ruoli assegnati |
+| | Gestione pull request | 0.75 | Utilizzo corretto delle pull request |
+| | Comunicazione | 0.5 | Documentazione e collaborazione |
+| **6. Presentazione Orale** | Processo di sviluppo | 0.5 | Spiegazione del percorso progettuale |
+| | Scelte gestionali | 0.5 | Motivazione delle decisioni tecniche |
+| | Gestione collaborativa | 0.5 | Descrizione del lavoro di gruppo |
