@@ -5,7 +5,11 @@ connection = sqlite3.connect('data.db')
 def see_all_contacts():
     
     cur = connection.cursor()
-    cur.execute('SELECT * FROM contacts;') #query per vedere tutti i contatti
+
+    # query the database for ALL data in the notes table
+    cur.execute('DELETE FROM contacts WHERE id = ?', (id, ))
+
+    # print the result
     result = cur.fetchall()
     print(result)
     # close the cursor
