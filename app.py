@@ -27,7 +27,9 @@ def start_routine():
         id=int(input())
         delete_a_contact(id)  
     elif (n==4):
-        search_for_a_contact()
+        nome = input()
+        cognome = input()
+        search_for_a_contact(nome, cognome)
     else:
         print('inserisci un numero valido')
         start_routine()

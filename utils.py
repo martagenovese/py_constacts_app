@@ -28,5 +28,10 @@ def delete_a_contact(id):
     # close the cursor
     cur.close()
 
-def search_for_a_contact():
-    ...
+def search_for_a_contact(nome, cognome):
+    cur = connection.cursor()
+    cur.execute('SELECT * FROM contacts WHERE nome = ? AND cognome = ?', (nome, cognome, )) #query per vedere tutti i contatti
+    result = cur.fetchall()
+    print(result)
+    # close the cursor
+    cur.close()
