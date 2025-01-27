@@ -1,14 +1,4 @@
-def see_all_contacts():
-    ...
-
-def add_a_contact():
-    ...
-
-def delete_a_contact():
-    ...
-
-def search_for_a_contact():
-    ...
+from utils import see_all_contacts, add_a_contact, delete_a_contact, search_for_a_contact
 
 def start_routine():
     print('''premere :
@@ -22,7 +12,10 @@ def start_routine():
     if (n==1):
         see_all_contacts()
     elif(n==2):
-        add_a_contact() 
+        nome = input('inserisci il nome: ')
+        cognome = input('inserisci il cognome: ')
+        telefono = input('inserisci il telefono: ')
+        add_a_contact(nome, cognome, telefono) 
     elif (n==3):
         id=int(input())
         delete_a_contact(id)  

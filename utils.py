@@ -11,6 +11,11 @@ def see_all_contacts():
     # close the cursor
     cur.close()
 
+def add_a_contact(nome, cognome, telefono):
+    cursor = connection.cursor()
+    cursor.execute(f"INSERT INTO contatti (nome, cognome, telefono) VALUES (?, ?, ?)", (nome, cognome, telefono))
+    connection.commit()
+    
 def add_a_contact():
     ...
 
