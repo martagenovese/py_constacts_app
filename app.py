@@ -17,7 +17,8 @@ def start_routine():
         telefono = input('inserisci il telefono: ')
         add_a_contact(nome, cognome, telefono) 
     elif (n==3):
-        delete_a_contact()  
+        id=int(input())
+        delete_a_contact(id)  
     elif (n==4):
         search_for_a_contact()
     else:
